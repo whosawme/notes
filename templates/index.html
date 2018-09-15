@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Test Forms</title>
+</head>
+<body>
+
+<!--This loops through each form passed in from flask
+     and renders the message and submit fields on the page-->
+{% for f in forms %}
+<div>
+<form>
+{{f.message}}
+{{f.submit}}
+</form>
+</div>
+{% endfor %}
+
+    
+        <form id="add" method="POST" action="/addform">
+        
+            <input type="submit" value="Add New Form"/>
+        
+        </form>
+</body>
+
+</html>
